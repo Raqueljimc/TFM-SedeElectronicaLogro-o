@@ -1,0 +1,132 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-base) var(--spacing-lg);
+  background-color: var(--color-heading-dark);
+  border-radius: 0 0 var(--radius-base) var(--radius-base);
+  color: var(--color-white);
+  font-family: var(--font-family);
+  position: relative;
+  overflow: hidden;
+}
+
+.header button {
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: -310%;
+  right: 150px;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 480px;
+  transform: rotate(-30deg);
+  background-image: url("../../assets/escudo-logroño-blanco.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================
+   IZQUIERDA
+========================= */
+
+.header-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: var(--spacing-lg);
+  z-index: 1;
+}
+
+/* logo */
+.header-logo img {
+  height: 45px;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+.header-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-weight-bold);
+  border-left: 2px solid var(--color-white);
+  padding-left: var(--spacing-lg);
+}
+
+.header-subtitle {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  border-left: 2px solid var(--color-white);
+  padding-left: var(--spacing-lg);
+}
+
+/* ===============================
+   RESPONSIVE (móvil w:360px)
+=============================== */
+
+@media (max-width: 360px) {
+
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: var(--spacing-base);
+  }
+
+  /* Izquierda */
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding-left: 0;
+  }
+
+  /* Logo */
+  .header-logo {
+    display: flex;
+    justify-content: left;
+  }
+  .header-logo img {
+    height: 28px;
+  }
+
+  /* Textos */
+  .header-title {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    border-left: none;
+    padding-left: 0;
+    white-space: nowrap;
+  }
+
+  .header-subtitle {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    border-left: none;
+    padding-left: 0;
+  }
+
+  /* Escudo en el fondo */
+  .header::after {
+    width: 480px;
+    height: 480px;
+    right: -300px;
+    top: -320%;
+    opacity: 0.08;
+    transform: rotate(-30deg);
+  }
+}

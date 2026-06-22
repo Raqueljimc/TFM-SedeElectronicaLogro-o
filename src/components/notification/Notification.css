@@ -1,0 +1,113 @@
+
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-base);
+  padding: var(--spacing-base);
+  border-radius: var(--radius-sm);
+  border: 2px solid;
+  font-family: var(--font-family);
+  position: relative;
+}
+
+/* =========================
+   ICONO
+========================= */
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.notification-title {
+  font-weight: var(--font-weight-bold);
+}
+
+.notification-description {
+  font-size: var(--font-size-base);
+}
+
+.notification-list {
+  margin-left: var(--spacing-base);
+  font-size: var(--font-size-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  font-style: italic;
+}
+
+.notification-link {
+  color: var(--color-primary-base);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* =========================
+   BOTÓN CERRAR
+========================= */
+
+.notification-close {
+  position: absolute;
+  right: var(--spacing-sm);
+  top: var(--spacing-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.notification-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* =========================
+   VARIANTS
+========================= */
+
+/* error */
+.notification-error {
+  border-color: var(--color-alert-base);
+}
+
+/* warning */
+.notification-warning {
+  border-color: var(--color-warning-base);
+}
+
+/* success */
+.notification-success {
+  border-color: var(--color-success-base);
+}
+
+/* info */
+.notification-info {
+  border-color: var(--color-info-base);
+}
+
+/* COLOR ICONOS POR VARIANTE */
+
+.notification-error .notification-icon {
+  color: var(--color-alert-base);
+}
+
+.notification-warning .notification-icon {
+  color: var(--color-warning-base);
+}
+
+.notification-success .notification-icon {
+  color: var(--color-success-base);
+}
+
+.notification-info .notification-icon {
+  color: var(--color-info-base);
+}

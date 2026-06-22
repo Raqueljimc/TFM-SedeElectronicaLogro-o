@@ -1,0 +1,102 @@
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+/* =========================
+   SELECT BASE
+========================= */
+
+.select-wrapper select {
+  appearance: none;
+  width: 100%;
+  border: 2px solid var(--color-neutral-dark);
+  border-radius: var(--radius-base);
+  background-color: var(--color-white);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  padding-right: 36px; /* espacio icono */
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* =========================
+   SIZES
+========================= */
+
+.select-sm select {
+  padding: var(--spacing-sm) var(--spacing-base);
+  padding-right: 38px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  border-radius: var(--radius-base);
+}
+
+.select-lg select {
+  padding: var(--spacing-sm) var(--spacing-base);
+  padding-right: 350px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  border-radius: var(--radius-base);
+}
+
+/* =========================
+   ICONO
+========================= */
+
+.select-icon {
+  position: absolute;
+  right: var(--spacing-base);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+/* =========================
+   HOVER / FOCUS
+========================= */
+
+/* hover */
+.select-wrapper select:hover {
+  border-color: var(--color-neutral-dark);
+}
+
+/* =========================
+   DISABLED
+========================= */
+
+.select-disabled select {
+  background-color: var(--color-neutral-light);
+  cursor: not-allowed;
+  color: var(--color-neutral-base);
+}
+
+.select-disabled .select-icon {
+  color: var(--color-neutral-base);
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.select-error select {
+  border-color: var(--color-alert-base);
+  color: var(--color-alert-base);
+}
+
+/* hover con error */
+.select-error select:hover {
+  border-color: var(--color-alert-dark);
+}
+
+/* icono en error */
+.select-error .select-icon {
+  color: var(--color-alert-base);
+}

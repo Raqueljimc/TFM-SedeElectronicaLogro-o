@@ -1,0 +1,70 @@
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  font-family: var(--font-family);
+}
+
+/* simple */
+.input-simple {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+.input-label {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input-description {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+}
+
+.input-error {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-alert-base);
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.input, .textarea {
+  border: 2px solid var(--color-neutral-light);
+  border-radius: var(--radius-base);
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  outline: none;
+  transition: all 0.2s ease;
+  width: 350px;
+}
+
+.textarea {
+  min-height: 100px;
+}
+
+/* focus */
+.input:focus, .textarea:focus {
+  border-color: var(--color-neutral-base);
+}
+
+/* error */
+.input-error-state {
+  border: var(--border-error);
+}

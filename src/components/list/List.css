@@ -1,0 +1,77 @@
+
+.list {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  width: 80%;
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-base);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-neutral-light);
+  cursor: pointer;
+}
+
+.list-left {
+  display: flex;
+  align-items: top;
+  justify-content: left;
+  gap: var(--spacing-lg);
+}
+
+/* icono */
+.list-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-neutral-dark);
+  margin-left: var(--spacing-base);
+}
+
+/* textos */
+.list-texts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+/* título */
+.list-title {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-primary-base);
+}
+
+/* subtítulo */
+.list-subtitle {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  margin-bottom: 0;
+}
+
+/* =========================
+   FLECHA
+========================= */
+
+.list-arrow {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--spacing-base);
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.list-item:hover {
+  background-color: var(--color-neutral-lighter);
+}

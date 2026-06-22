@@ -1,0 +1,78 @@
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-family: var(--font-family);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* =========================
+   PESOS
+========================= */
+
+.link-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.link-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.link-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* =========================
+   VARIANTES
+========================= */
+
+/* default */
+.link-default {
+  color: var(--color-primary-base);
+}
+
+.link-default:hover {
+  color: var(--color-primary-dark);
+}
+
+/* error */
+.link-error {
+  color: var(--color-alert-base);
+}
+
+.link-error:hover {
+  color: var(--color-alert-dark);
+}
+
+/* neutral */
+.link-neutral {
+  color: var(--color-neutral-dark);
+}
+
+.link-neutral:hover {
+  color: var(--color-black);
+}
+
+/* =========================
+   ICONOS
+========================= */
+
+.link-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   LINK "VER MÁS"
+========================= */
+
+.link-more .link-icon {
+  transition: transform 0.2s ease;
+}
+
+.link-more:hover .link-icon {
+  transform: translateX(4px);
+}

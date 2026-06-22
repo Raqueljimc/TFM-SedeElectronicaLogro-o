@@ -1,0 +1,87 @@
+
+.searchbar-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  font-family: var(--font-family);
+}
+
+/* label */
+.searchbar-label {
+  font-weight: var(--font-weight-semibold);
+}
+
+.searchbar-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.searchbar-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* input */
+.searchbar-wrapper input {
+  width: 350px;
+  padding: var(--spacing-sm) var(--spacing-base);
+  border: 2px solid var(--color-neutral-light);
+  border-radius: var(--radius-base);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  outline: none;
+  transition: all 0.2s ease;
+  font-style: italic;
+}
+
+/* icono */
+.searchbar-icon {
+  position: absolute;
+  right: var(--spacing-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--color-neutral-dark);
+}
+
+/* =========================
+   ESTADOS
+========================= */
+
+/* hover */
+.searchbar-wrapper:not(.disabled, .error) input:hover {
+  border-color: var(--color-neutral-dark);
+}
+
+/* focus */
+.searchbar-wrapper:not(.disabled, .error) input:focus {
+  border-color: var(--color-neutral-dark);
+}
+
+/* error */
+.searchbar-wrapper.error input {
+  border: var(--border-error);
+}
+
+/* texto error */
+.searchbar-error {
+  font-size: var(--font-size-sm);
+  color: var(--color-alert-base);
+}
+
+/* disabled */
+.searchbar-wrapper.disabled input {
+  background-color: var(--color-neutral-light);
+  cursor: not-allowed;
+  color: var(--color-neutral-base);
+}
+
+.searchbar-wrapper.disabled .searchbar-icon {
+  color: var(--color-neutral-base);
+}

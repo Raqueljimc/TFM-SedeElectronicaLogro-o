@@ -1,0 +1,105 @@
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+}
+
+/* fila */
+.stepper-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-3xl);
+}
+
+/* =========================
+   STEP
+========================= */
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+}
+
+/* =========================
+   TOP (circle + line)
+========================= */
+
+.step-top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* círculo */
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-base);
+  background-color: var(--color-white);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+/* estado activo */
+.step-circle.filled {
+  background-color: var(--color-primary-base);
+  color: var(--color-white);
+}
+
+/* =========================
+   LÍNEA
+========================= */
+
+.step-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 1.25px;
+  background-color: var(--color-neutral-light);
+  transform: translateY(-50%);
+  width: calc(100% + var(--spacing-3xl));
+  z-index: 0;
+}
+
+.step-line.filled {
+  background-color: var(--color-primary-base);
+  height: 2px;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+.step-texts {
+  text-align: center;
+  margin-top: var(--spacing-sm);
+}
+
+.step-title {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-light);
+}
+
+.step-title.active {
+  color: var(--color-primary-base);
+}
+
+.step-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-base);
+}
+
+.step-description.active {
+  color: var(--color-black);
+}

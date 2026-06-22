@@ -1,0 +1,114 @@
+
+.pagination-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.page-item {
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-primary-base);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  color: var(--color-primary-base);
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.page-item:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* activo */
+.page-item.active {
+  background-color: var(--color-primary-base);
+  color: var(--color-white);
+}
+
+/* =========================
+   (...)
+========================= */
+.pagination-dots {
+  padding: 0 var(--spacing-xs);
+  color: var(--color-neutral-base);
+}
+
+
+
+/* =========================
+   PAGINATION FOOTER
+========================= */
+.pagination-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  font-family: var(--font-family);
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.footer-select-wrapper {
+  position: relative;
+}
+
+/* botón */
+.footer-select {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-base);
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.footer-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-white);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-base);
+  margin-top: var(--spacing-xs);
+  padding: var(--spacing-xs) 0;
+  z-index: 10;
+}
+
+/* opciones */
+.footer-option {
+  padding: var(--spacing-xs) var(--spacing-base);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* seleccionada */
+.footer-option.selected {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-base);
+}
+
+/* icono */
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-black);
+}

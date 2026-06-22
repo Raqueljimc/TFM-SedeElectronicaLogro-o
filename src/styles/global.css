@@ -1,0 +1,122 @@
+:root {
+  /* =========================
+    COLORES
+  ========================= */
+
+  /* Primario */
+  --color-primary-light: #f2b3b8;
+  --color-primary-base: #9e1b32;
+  --color-primary-dark: #6f1223;
+
+  /* Soporte - Warning */
+  --color-warning-light: #f5e2a8;
+  --color-warning-base: #d4a017;
+  --color-warning-dark: #9a720f;
+
+  /* Soporte - Success */
+  --color-success-light: #cfe8d6;
+  --color-success-base: #2f9e44;
+  --color-success-dark: #1e6f30;
+
+  /* Soporte - Info */
+  --color-info-light: #cfe4ec;
+  --color-info-base: #2b6f89;
+  --color-info-dark: #1e4f63;
+
+  /* Soporte - Alert */
+  --color-alert-light: #f4c5c1;
+  --color-alert-base: #d92d20;
+  --color-alert-dark: #ab2016;
+
+  /* Contenido */
+  --color-neutral-base: #6b7280;
+  --color-neutral-dark: #374151;
+  --color-black: #111827;
+
+  /* Fondo */
+  --color-white: #ffffff;
+  --color-neutral-lighter: #F9FAFB;
+  --color-neutral-light: #E5E7EB;
+
+  /* Cabecera */
+  --color-heading-base: #1F2937;
+  --color-heading-dark: #111827;
+
+  /* =========================
+    TIPOGRAFÍA
+  ========================= */
+
+  --font-family: "Roboto", sans-serif;
+
+  /* Encabezados */
+
+  --font-size-h1: 40px;
+  --line-height-h1: 50px;
+
+  --font-size-h2: 30px;
+  --line-height-h2: 37.5px;
+
+  --font-size-h3: 24px;
+  --line-height-h3: 30px;
+
+  --font-size-h4: 18px;
+  --line-height-h4: 22.5px;
+
+  /* Texto lg */
+
+  --font-size-lg: 18px;
+  --line-height-lg: 28px;
+
+  /* Texto base */
+
+  --font-size-base: 16px;
+  --line-height-base: 24px;
+
+  /* Texto sm */
+
+  --font-size-sm: 14px;
+  --line-height-sm: 20px;
+
+  /* Texto xs */
+
+  --font-size-xs: 12px;
+  --line-height-xs: 16px;
+
+  /* Pesos */
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* =========================
+    ESPACIADO
+  ========================= */
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-base: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 80px;
+  --spacing-3xl: 160px;
+
+  /* =========================
+    BORDES
+  ========================= */
+
+  --radius-sm: 8px;
+  --radius-base: 12px;
+  --radius-lg: 16px;
+
+  /* =========================
+    SOMBRAS
+  ========================= */
+
+  --shadow-base: 2px 4px 10px rgba(55, 65, 81, 0.35);
+
+  /* =========================
+    ESTADOS
+  ========================= */
+
+  --border-error: 3px solid var(--color-alert-base);
+}

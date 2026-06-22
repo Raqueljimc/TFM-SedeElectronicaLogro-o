@@ -1,0 +1,96 @@
+
+.card {
+  display: flex;
+  background-color: var(--color-white);
+  border-radius: var(--radius-base);
+  border: 2px solid var(--color-neutral-light);
+  overflow: hidden;
+  max-height: 300px;
+  cursor: pointer;
+  max-width: 280px;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+
+/* icono */
+.card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-neutral-dark);
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+.card-title {
+  font-family: var(--font-family);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  font-weight: var(--font-weight-bold);
+  margin: var(--spacing-base) 0;
+}
+
+.card-subtitle {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+}
+
+.card-description {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  margin: var(--spacing-base) 0;
+}
+
+/* link */
+.card-link {
+  font-family: var(--font-family);
+  margin-top: var(--spacing-sm);
+  color: var(--color-primary-base);
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0;
+}
+
+/* =========================
+   IMAGEN
+========================= */
+
+.card-with-image {
+  display: flex;
+  max-width: 500px;
+}
+
+.card-with-image .card-content {
+  width: 60%;
+}
+
+.card-with-image .card-image {
+  width: 40%;
+  background-color: var(--color-neutral-light);
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.card-hover {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+  background-color: var(--color-neutral-lighter);
+  transform: translateY(-3.5px);
+}
