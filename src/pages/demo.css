@@ -1,9 +1,9 @@
 .demo-view {
   background-color: var(--color-white);
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* =========================
@@ -11,12 +11,12 @@
 ========================= */
 
 .demo-main {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  padding: var(--spacing-xl);
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--spacing-xl);
 }
 
@@ -34,8 +34,60 @@
   font-size: var(--font-size-h2);
 }
 
-.demo-hero p {
+.demo-hero h2 {
   color: var(--color-neutral-dark);
+}
+
+.demo-bg-box {
+  position: relative;
+  background-image: url("../assets/puente-piedra-logrono2.jpg");
+  background-size: cover;
+  background-position: 30% 48%;
+  padding: var(--spacing-lg) var(--spacing-3xl) var(--spacing-xl) var(--spacing-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-height: 400px;
+}
+
+.demo-bg-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: inherit;
+
+  z-index: 0;
+}
+
+.demo-bg-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+.demo-text {
+  padding-left: var(--spacing-lg);
+  margin-left: var(--spacing-lg);
+  border-left: 3px solid var(--color-white);
+  text-shadow: var(--shadow-base);
+}
+
+.h2-bienvenido-strong {
+  color: var(--color-white);
+  text-shadow: var(--shadow-base);
+  font-size: var(--font-size-h3);
+}
+
+.h2-bienvenido-light {
+  color: var(--color-white);
+  text-shadow: var(--shadow-base);
+  font-weight: var(--font-weight-regular);
+}
+
+.demo-bg-box .card {
+  background: var(--color-white);
+  box-shadow: var(--shadow-base);
 }
 
 /* =========================
@@ -46,10 +98,38 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-base);
+  width: 100vw;
 }
 
-.demo-section h2 {
-  font-size: var(--font-size-h3);
+.demo-section h3 {
+  font-family: var(--font-family);
+}
+
+.section-notification {
+  max-width: 500px;
+  margin-bottom: 0 !important;
+}
+
+.demo-list {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: var(--spacing-xl) var(--spacing-3xl);
+  padding-top: 0;
+}
+
+.demo-list-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+  width: 100%;
+}
+
+.demo-divider {
+  height: 1px;
+  width: 95%;
+  background-color: var(--color-neutral-light);
+  margin: 0;
 }
 
 /* =========================
@@ -58,18 +138,8 @@
 
 .demo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-lg);
-}
-
-/* =========================
-   LISTA
-========================= */
-
-.demo-list {
-  display: flex;
-  gap: var(--spacing-base);
-  flex-wrap: wrap;
 }
 
 /* =========================

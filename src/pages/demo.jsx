@@ -5,17 +5,22 @@ import Header from "../components/header/Header";
 import Menu from "../components/menu/Menu";
 import Footer from "../components/footer/Footer";
 
-import Searchbar from "../components/searchbar/Searchbar";
 import Card from "../components/card/Card";
 import Notification from "../components/notification/Notification";
 import Button from "../components/button/Button";
+import List from "../components/list/List";
+
+import { Link as RouterLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Demo() {
+  const navigate = useNavigate();
+
   return (
     <div className="demo-view">
 
       {/* HEADER */}
-      <Header variant="base" />
+      <Header variant="base" onConnect={() => navigate("/login")} />
 
       {/* MENU */}
       <Menu />
@@ -23,55 +28,71 @@ function Demo() {
       {/* CONTENIDO */}
       <main className="demo-main">
 
-        {/* HERO */}
-        <section className="demo-hero">
-          <h1>Sede electrónica</h1>
-          <p>
-            Accede a los servicios electrónicos del Ayuntamiento de Logroño
-          </p>
-
-          <Searchbar withButton />
-        </section>
-
         {/* ACCESOS RÁPIDOS */}
         <section className="demo-section">
-          <h2>Accesos rápidos</h2>
 
-          <div className="demo-grid">
-            <Card
-              title="Cita previa"
-              description="Solicita cita para atención presencial."
-            />
+          <div className="demo-bg-box">
 
-            <Card
-              title="Pagos y recibos"
-              description="Consulta y paga tus recibos municipales."
-            />
+            <div className="demo-text">
+              <h3 className="h2-bienvenido-strong">Bienvenido a la Sede Electrónica del Ayuntamiento de Logroño,</h3>
+              <h3 className="h2-bienvenido-light">aquí podrá realizar sus gestiones municipales de forma cómoda y segura.</h3>
+            </div>
 
-            <Card
-              title="Padrón municipal"
-              description="Gestiones relacionadas con el padrón."
-            />
+            <div className="demo-grid">
+              <Card
+                hoverable
+                title="Cita previa"
+                description="Solicita cita para atención presencial."
+                showLink
+              />
+              <Card
+                hoverable
+                title="Pagos y recibos"
+                description="Consulta y paga tus recibos municipales."
+                showLink
+              />
+              <Card
+                hoverable
+                title="Padrón municipal"
+                description="Gestiones relacionadas con el padrón."
+                showLink
+              />
+              <Card
+                hoverable
+                title="Consulta de expedientes"
+                description="Revisa el estado de tus trámites en curso."
+                showLink
+              />
+            </div>
+
           </div>
+
         </section>
 
         {/* NOTIFICACIÓN */}
-        <section className="demo-section">
+        <section className="section-notification">
           <Notification
             variant="info"
             title="Aviso"
-            description="La sede electrónica puede experimentar interrupciones puntuales."
+            description="La sede electrónica puede experimentar interrupciones 
+                        puntuales debido a su estado de mantenimiento."
           />
         </section>
 
-        {/* TRÁMITES DESTACADOS */}
-        <section className="demo-section">
-          <h2>Trámites destacados</h2>
+        <div className="demo-divider" />
 
-          <div className="demo-list">
-            <Button variant="secondary">Solicitud de licencia</Button>
-            <Button variant="secondary">Alta en padrón</Button>
-            <Button variant="secondary">Pago de impuestos</Button>
+        {/* LISTA */}
+        <section className="demo-list">
+          <div className="demo-list-inner">
+            <h2>Trámites destacados</h2>
+            <List
+              items={[
+                { title: "Solicitud de licencia de obras", subtitle: "Urbanismo · Plazo: 3 meses" },
+                { title: "Declaración de residuos", subtitle: "Medio ambiente · Plazo: 1 mes" },
+                { title: "Recurso de multa de tráfico", subtitle: "Tráfico · Plazo: 20 días hábiles" },
+                { title: "Solicitud de bonificación IBI", subtitle: "Tributos · Plazo: 2 meses" }
+              ]}
+            />
           </div>
         </section>
 

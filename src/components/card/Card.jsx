@@ -6,27 +6,35 @@ export default function Card({
   title,
   subtitle,
   description,
+  children,
   image,
-  hoverable = false
+  hoverable = false,
+  showLink = false
 }) {
   return (
     <div className={`card ${hoverable ? "card-hover" : ""} ${image ? "card-with-image" : ""}`}>
 
-      {/* CONTENIDO */}
       <div className="card-content">
-        <div className="card-icon"><FolderIcon /></div>
+        <div className="card-icon">
+          <FolderIcon />
+        </div>
 
-        <h4 className="card-title">{title}</h4>
-        <p className="card-subtitle">{subtitle}</p>
+        {title && <h4 className="card-title">{title}</h4>}
+        {subtitle && <p className="card-subtitle">{subtitle}</p>}
+        {description && <p className="card-description">{description}</p>}
 
-        <p className="card-description">{description}</p>
+        {children}
 
-        <Link weight="semibold" more>Ver más</Link>
+        {showLink && (
+          <Link weight="semibold" more>
+            Ver más
+          </Link>
+        )}
+
       </div>
 
-      {/* IMAGEN */}
-      {image && (<div className="card-image"></div>)}
-      
+      {image && <div className="card-image"></div>}
+
     </div>
   );
 }

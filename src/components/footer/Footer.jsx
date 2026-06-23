@@ -3,21 +3,52 @@ import Link from "../link/Link";
 import logo from "/src/assets/logo-logroño-blanco.png";
 
 export default function Footer() {
+
+  const columns = [
+    [
+      "Qué es la Sede electrónica",
+      "Verificación de seguridad",
+      "Protección de datos",
+      "Calendario y hora oficiales"
+    ],
+    [
+      "Procesos selectivos",
+      "Perfil del contratante",
+      "Exposición pública",
+      "Gaceta municipal"
+    ],
+    [
+      "Registro de intereses",
+      "Registro de convenios",
+      "Registro de honores",
+      "Registro de distinciones"
+    ],
+    [
+      "Trámites telemáticos",
+      "Registro electrónico",
+      "Quejas y sugerencias",
+      "Verificación de documentos"
+    ]
+  ];
+
   return (
     <footer className="footer">
 
       {/* LINKS */}
       <div className="footer-columns">
-        {[...Array(4)].map((_, colIndex) => (
+        {columns.map((column, colIndex) => (
           <div key={colIndex} className="footer-column">
-            {[...Array(4)].map((_, i) => (
+
+            {column.map((text, i) => (
               <Link key={i} variant="default" weight="regular">
-                Link
+                {text}
               </Link>
             ))}
+
           </div>
         ))}
       </div>
+
 
       {/* LÍNEA DIVISORIA */}
       <div className="footer-divider" />

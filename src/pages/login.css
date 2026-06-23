@@ -1,0 +1,97 @@
+.login-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.login-hero {
+  padding: var(--spacing-lg);
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.login-hero h1 {
+  color: var(--color-primary-base);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h1);
+  font-family: var(--font-family);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.login-cards {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.login-box {
+  background: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-base);
+  border: 2px solid var(--color-neutral-light);
+}
+
+.login-box h3 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-h4);
+  color: var(--color-heading-dark);
+}
+
+.login-box p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  color: var(--color-neutral-base);
+  padding: 0 var(--spacing-base);
+  font-family: var(--font-family);
+}
+
+.login-box label {
+  color: var(--color-neutral-base);
+  font-size: var(--font-size-base);
+}
+
+.login-box img {
+  max-width: 230px;
+}
+
+/* links pequeños */
+.login-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.login-links a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* =========================
+   NOTIFICACIÓN
+========================= */
+.login-notification {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: var(--spacing-xl);
+}

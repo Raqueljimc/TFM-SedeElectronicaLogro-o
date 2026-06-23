@@ -28,6 +28,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import Demo from "./pages/demo";
+import Login from "./pages/login";
 
 function App() {
   
@@ -54,7 +55,7 @@ function App() {
               </div>
               <div className="hero-divider" />
               <p className="hero-year">UNIR · 2025–2026</p>
-              <RouterLink className="hero-cta" to="demo">
+              <RouterLink className="hero-cta" to="/demo">
                 Ver demo
                 <ArrowRightIcon className="hero-cta-icon" />
               </RouterLink>
@@ -238,6 +239,7 @@ function App() {
                     title="Título"
                     subtitle="Subtítulo"
                     description="Lorem ipsum dolor sit amet, nsectetur adipiscing elit. Morbi vitae felis modo, ullamcorper orci vel, faucibus lectus. Phasellus venenatis turpis nec magna porta feugiat."
+                    showLink
                   />
 
                 </div>
@@ -254,6 +256,7 @@ function App() {
                     title="Título"
                     subtitle="Subtítulo"
                     description="Lorem ipsum dolor sit amet, nsectetur adipiscing elit. Morbi vitae felis modo, ullamcorper orci vel, faucibus lectus. Phasellus venenatis turpis nec magna porta feugiat."
+                    showLink
                   />
 
                 </div>
@@ -641,7 +644,11 @@ function App() {
         </div>
       } />
 
-      <Route path="demo" element={<Demo />} />
+      {/* Página demo */}
+      <Route path="/demo" element={<Demo />} />
+
+      {/* Página login */}
+      <Route path="/login" element={<Login />} />
 
     </Routes>
   );

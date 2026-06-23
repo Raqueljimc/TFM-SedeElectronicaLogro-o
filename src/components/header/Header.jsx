@@ -6,7 +6,9 @@ import { useState, useEffect } from "react";
 export default function Header({
   variant = "base", // base | seccion
   title = "Sede electrónica",
-  subtitle
+  subtitle,
+  onConnect,
+  children
 }) {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -59,7 +61,12 @@ export default function Header({
 
       {/* BOTÓN */}
       
-      <Button className="header-button" variant="primary" size={isMobile ? "sm" : "base"}>
+      <Button 
+        className="header-button" 
+        variant="primary" 
+        size={isMobile ? "sm" : "base"}
+        onClick={onConnect}
+        >
         Conectar
       </Button>
 
