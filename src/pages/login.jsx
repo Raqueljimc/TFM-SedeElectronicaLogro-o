@@ -2,6 +2,9 @@ import "./login.css";
 import "../styles/global.css";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 import certDni from "../assets/certifdnie.jpg";
 
@@ -17,6 +20,7 @@ import Modal from "../components/modal/Modal";
 function Login() {
 
   const [openModal, setOpenModal] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="login-view">
@@ -26,6 +30,15 @@ function Login() {
 
       {/* HERO */}
       <div className="login-hero">
+
+      <div className="login-back">
+          <Button
+            variant="secondary"
+            size="sm"
+            icon={ArrowLeftIcon}
+            onClick={() => navigate("/demo")}
+          />
+        </div>
 
         <h1>Acceso</h1>
 
