@@ -91,6 +91,7 @@ SedeElectronicaLogrono/
 ├── vite.config.js
 ├── eslint.config.js
 └── README.md
+```
 ---
 
 ## Vistas
@@ -133,6 +134,7 @@ Se utiliza **React Router**:
   <Route path="/demo" element={<Demo />} />
   <Route path="/login" element={<Login />} />
 </Routes>
+```
 
 ---
 
