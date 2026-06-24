@@ -45,6 +45,7 @@ Se han desarrollado los siguientes componentes:
 
 ## Estructura del proyecto
 
+```bash
 SedeElectronicaLogrono/
 ├── public/
 ├── src/
