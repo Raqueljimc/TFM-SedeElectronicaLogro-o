@@ -172,6 +172,6 @@ El proyecto incluye:
 ## Autora
 
 Raquel Jiménez Castrillo
-Máster Universitario en Diseño y Desarrollo de Interfaz de Usuario Web
-Trabajo Fin de Máster
-UNIR · 2025–2026
+- Máster Universitario en Diseño y Desarrollo de Interfaz de Usuario Web
+- Trabajo Fin de Máster
+- UNIR · 2025–2026
